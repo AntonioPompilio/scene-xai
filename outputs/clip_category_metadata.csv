@@ -1,0 +1,366 @@
+idx,full_name,io,prompt
+0,airfield,outdoor,a photo of airfield
+1,airplane_cabin,indoor,a photo of airplane cabin
+2,airport_terminal,indoor,a photo of airport terminal
+3,alcove,indoor,a photo of alcove
+4,alley,outdoor,a photo of alley
+5,amphitheater,outdoor,a photo of amphitheater
+6,amusement_arcade,indoor,a photo of amusement arcade
+7,amusement_park,outdoor,a photo of amusement park
+8,apartment_building/outdoor,outdoor,a photo of apartment building outdoor
+9,aquarium,indoor,a photo of aquarium
+10,aqueduct,outdoor,a photo of aqueduct
+11,arcade,indoor,a photo of arcade
+12,arch,outdoor,a photo of arch
+13,archaelogical_excavation,indoor,a photo of archaelogical excavation
+14,archive,indoor,a photo of archive
+15,arena/hockey,indoor,a photo of arena hockey
+16,arena/performance,indoor,a photo of arena performance
+17,arena/rodeo,indoor,a photo of arena rodeo
+18,army_base,outdoor,a photo of army base
+19,art_gallery,indoor,a photo of art gallery
+20,art_school,indoor,a photo of art school
+21,art_studio,indoor,a photo of art studio
+22,artists_loft,indoor,a photo of artists loft
+23,assembly_line,indoor,a photo of assembly line
+24,athletic_field/outdoor,outdoor,a photo of athletic field outdoor
+25,atrium/public,indoor,a photo of atrium public
+26,attic,indoor,a photo of attic
+27,auditorium,indoor,a photo of auditorium
+28,auto_factory,indoor,a photo of auto factory
+29,auto_showroom,indoor,a photo of auto showroom
+30,badlands,outdoor,a photo of badlands
+31,bakery/shop,indoor,a photo of bakery shop
+32,balcony/exterior,outdoor,a photo of balcony exterior
+33,balcony/interior,outdoor,a photo of balcony interior
+34,ball_pit,indoor,a photo of ball pit
+35,ballroom,indoor,a photo of ballroom
+36,bamboo_forest,outdoor,a photo of bamboo forest
+37,bank_vault,indoor,a photo of bank vault
+38,banquet_hall,indoor,a photo of banquet hall
+39,bar,indoor,a photo of bar
+40,barn,outdoor,a photo of barn
+41,barndoor,outdoor,a photo of barndoor
+42,baseball_field,outdoor,a photo of baseball field
+43,basement,indoor,a photo of basement
+44,basketball_court/indoor,indoor,a photo of basketball court indoor
+45,bathroom,indoor,a photo of bathroom
+46,bazaar/indoor,indoor,a photo of bazaar indoor
+47,bazaar/outdoor,outdoor,a photo of bazaar outdoor
+48,beach,outdoor,a photo of beach
+49,beach_house,outdoor,a photo of beach house
+50,beauty_salon,indoor,a photo of beauty salon
+51,bedchamber,indoor,a photo of bedchamber
+52,bedroom,indoor,a photo of bedroom
+53,beer_garden,outdoor,a photo of beer garden
+54,beer_hall,indoor,a photo of beer hall
+55,berth,indoor,a photo of berth
+56,biology_laboratory,indoor,a photo of biology laboratory
+57,boardwalk,outdoor,a photo of boardwalk
+58,boat_deck,outdoor,a photo of boat deck
+59,boathouse,outdoor,a photo of boathouse
+60,bookstore,indoor,a photo of bookstore
+61,booth/indoor,indoor,a photo of booth indoor
+62,botanical_garden,outdoor,a photo of botanical garden
+63,bow_window/indoor,indoor,a photo of bow window indoor
+64,bowling_alley,indoor,a photo of bowling alley
+65,boxing_ring,indoor,a photo of boxing ring
+66,bridge,outdoor,a photo of bridge
+67,building_facade,outdoor,a photo of building facade
+68,bullring,outdoor,a photo of bullring
+69,burial_chamber,indoor,a photo of burial chamber
+70,bus_interior,indoor,a photo of bus interior
+71,bus_station/indoor,indoor,a photo of bus station indoor
+72,butchers_shop,indoor,a photo of butchers shop
+73,butte,outdoor,a photo of butte
+74,cabin/outdoor,outdoor,a photo of cabin outdoor
+75,cafeteria,indoor,a photo of cafeteria
+76,campsite,outdoor,a photo of campsite
+77,campus,outdoor,a photo of campus
+78,canal/natural,outdoor,a photo of canal natural
+79,canal/urban,outdoor,a photo of canal urban
+80,candy_store,indoor,a photo of candy store
+81,canyon,outdoor,a photo of canyon
+82,car_interior,indoor,a photo of car interior
+83,carrousel,outdoor,a photo of carrousel
+84,castle,outdoor,a photo of castle
+85,catacomb,indoor,a photo of catacomb
+86,cemetery,outdoor,a photo of cemetery
+87,chalet,outdoor,a photo of chalet
+88,chemistry_lab,indoor,a photo of chemistry lab
+89,childs_room,indoor,a photo of childs room
+90,church/indoor,indoor,a photo of church indoor
+91,church/outdoor,outdoor,a photo of church outdoor
+92,classroom,indoor,a photo of classroom
+93,clean_room,indoor,a photo of clean room
+94,cliff,outdoor,a photo of cliff
+95,closet,indoor,a photo of closet
+96,clothing_store,indoor,a photo of clothing store
+97,coast,outdoor,a photo of coast
+98,cockpit,indoor,a photo of cockpit
+99,coffee_shop,indoor,a photo of coffee shop
+100,computer_room,indoor,a photo of computer room
+101,conference_center,indoor,a photo of conference center
+102,conference_room,indoor,a photo of conference room
+103,construction_site,outdoor,a photo of construction site
+104,corn_field,outdoor,a photo of corn field
+105,corral,outdoor,a photo of corral
+106,corridor,indoor,a photo of corridor
+107,cottage,outdoor,a photo of cottage
+108,courthouse,outdoor,a photo of courthouse
+109,courtyard,outdoor,a photo of courtyard
+110,creek,outdoor,a photo of creek
+111,crevasse,outdoor,a photo of crevasse
+112,crosswalk,outdoor,a photo of crosswalk
+113,dam,outdoor,a photo of dam
+114,delicatessen,indoor,a photo of delicatessen
+115,department_store,indoor,a photo of department store
+116,desert/sand,outdoor,a photo of desert sand
+117,desert/vegetation,outdoor,a photo of desert vegetation
+118,desert_road,outdoor,a photo of desert road
+119,diner/outdoor,outdoor,a photo of diner outdoor
+120,dining_hall,indoor,a photo of dining hall
+121,dining_room,indoor,a photo of dining room
+122,discotheque,indoor,a photo of discotheque
+123,doorway/outdoor,outdoor,a photo of doorway outdoor
+124,dorm_room,indoor,a photo of dorm room
+125,downtown,outdoor,a photo of downtown
+126,dressing_room,indoor,a photo of dressing room
+127,driveway,outdoor,a photo of driveway
+128,drugstore,indoor,a photo of drugstore
+129,elevator/door,indoor,a photo of elevator door
+130,elevator_lobby,indoor,a photo of elevator lobby
+131,elevator_shaft,indoor,a photo of elevator shaft
+132,embassy,outdoor,a photo of embassy
+133,engine_room,indoor,a photo of engine room
+134,entrance_hall,indoor,a photo of entrance hall
+135,escalator/indoor,indoor,a photo of escalator indoor
+136,excavation,outdoor,a photo of excavation
+137,fabric_store,indoor,a photo of fabric store
+138,farm,outdoor,a photo of farm
+139,fastfood_restaurant,indoor,a photo of fastfood restaurant
+140,field/cultivated,outdoor,a photo of field cultivated
+141,field/wild,outdoor,a photo of field wild
+142,field_road,outdoor,a photo of field road
+143,fire_escape,outdoor,a photo of fire escape
+144,fire_station,outdoor,a photo of fire station
+145,fishpond,outdoor,a photo of fishpond
+146,flea_market/indoor,indoor,a photo of flea market indoor
+147,florist_shop/indoor,indoor,a photo of florist shop indoor
+148,food_court,indoor,a photo of food court
+149,football_field,outdoor,a photo of football field
+150,forest/broadleaf,outdoor,a photo of forest broadleaf
+151,forest_path,outdoor,a photo of forest path
+152,forest_road,outdoor,a photo of forest road
+153,formal_garden,outdoor,a photo of formal garden
+154,fountain,outdoor,a photo of fountain
+155,galley,indoor,a photo of galley
+156,garage/indoor,indoor,a photo of garage indoor
+157,garage/outdoor,outdoor,a photo of garage outdoor
+158,gas_station,outdoor,a photo of gas station
+159,gazebo/exterior,outdoor,a photo of gazebo exterior
+160,general_store/indoor,indoor,a photo of general store indoor
+161,general_store/outdoor,outdoor,a photo of general store outdoor
+162,gift_shop,indoor,a photo of gift shop
+163,glacier,outdoor,a photo of glacier
+164,golf_course,outdoor,a photo of golf course
+165,greenhouse/indoor,indoor,a photo of greenhouse indoor
+166,greenhouse/outdoor,outdoor,a photo of greenhouse outdoor
+167,grotto,outdoor,a photo of grotto
+168,gymnasium/indoor,indoor,a photo of gymnasium indoor
+169,hangar/indoor,indoor,a photo of hangar indoor
+170,hangar/outdoor,outdoor,a photo of hangar outdoor
+171,harbor,outdoor,a photo of harbor
+172,hardware_store,indoor,a photo of hardware store
+173,hayfield,outdoor,a photo of hayfield
+174,heliport,outdoor,a photo of heliport
+175,highway,outdoor,a photo of highway
+176,home_office,indoor,a photo of home office
+177,home_theater,indoor,a photo of home theater
+178,hospital,outdoor,a photo of hospital
+179,hospital_room,indoor,a photo of hospital room
+180,hot_spring,outdoor,a photo of hot spring
+181,hotel/outdoor,outdoor,a photo of hotel outdoor
+182,hotel_room,indoor,a photo of hotel room
+183,house,outdoor,a photo of house
+184,hunting_lodge/outdoor,outdoor,a photo of hunting lodge outdoor
+185,ice_cream_parlor,indoor,a photo of ice cream parlor
+186,ice_floe,outdoor,a photo of ice floe
+187,ice_shelf,outdoor,a photo of ice shelf
+188,ice_skating_rink/indoor,indoor,a photo of ice skating rink indoor
+189,ice_skating_rink/outdoor,outdoor,a photo of ice skating rink outdoor
+190,iceberg,outdoor,a photo of iceberg
+191,igloo,outdoor,a photo of igloo
+192,industrial_area,outdoor,a photo of industrial area
+193,inn/outdoor,outdoor,a photo of inn outdoor
+194,islet,outdoor,a photo of islet
+195,jacuzzi/indoor,indoor,a photo of jacuzzi indoor
+196,jail_cell,indoor,a photo of jail cell
+197,japanese_garden,outdoor,a photo of japanese garden
+198,jewelry_shop,indoor,a photo of jewelry shop
+199,junkyard,outdoor,a photo of junkyard
+200,kasbah,outdoor,a photo of kasbah
+201,kennel/outdoor,outdoor,a photo of kennel outdoor
+202,kindergarden_classroom,indoor,a photo of kindergarden classroom
+203,kitchen,indoor,a photo of kitchen
+204,lagoon,outdoor,a photo of lagoon
+205,lake/natural,outdoor,a photo of lake natural
+206,landfill,outdoor,a photo of landfill
+207,landing_deck,outdoor,a photo of landing deck
+208,laundromat,indoor,a photo of laundromat
+209,lawn,outdoor,a photo of lawn
+210,lecture_room,indoor,a photo of lecture room
+211,legislative_chamber,indoor,a photo of legislative chamber
+212,library/indoor,indoor,a photo of library indoor
+213,library/outdoor,outdoor,a photo of library outdoor
+214,lighthouse,outdoor,a photo of lighthouse
+215,living_room,indoor,a photo of living room
+216,loading_dock,outdoor,a photo of loading dock
+217,lobby,indoor,a photo of lobby
+218,lock_chamber,outdoor,a photo of lock chamber
+219,locker_room,indoor,a photo of locker room
+220,mansion,outdoor,a photo of mansion
+221,manufactured_home,outdoor,a photo of manufactured home
+222,market/indoor,indoor,a photo of market indoor
+223,market/outdoor,outdoor,a photo of market outdoor
+224,marsh,outdoor,a photo of marsh
+225,martial_arts_gym,indoor,a photo of martial arts gym
+226,mausoleum,outdoor,a photo of mausoleum
+227,medina,outdoor,a photo of medina
+228,mezzanine,indoor,a photo of mezzanine
+229,moat/water,outdoor,a photo of moat water
+230,mosque/outdoor,outdoor,a photo of mosque outdoor
+231,motel,outdoor,a photo of motel
+232,mountain,outdoor,a photo of mountain
+233,mountain_path,outdoor,a photo of mountain path
+234,mountain_snowy,outdoor,a photo of mountain snowy
+235,movie_theater/indoor,indoor,a photo of movie theater indoor
+236,museum/indoor,indoor,a photo of museum indoor
+237,museum/outdoor,outdoor,a photo of museum outdoor
+238,music_studio,indoor,a photo of music studio
+239,natural_history_museum,indoor,a photo of natural history museum
+240,nursery,indoor,a photo of nursery
+241,nursing_home,indoor,a photo of nursing home
+242,oast_house,outdoor,a photo of oast house
+243,ocean,outdoor,a photo of ocean
+244,office,indoor,a photo of office
+245,office_building,outdoor,a photo of office building
+246,office_cubicles,indoor,a photo of office cubicles
+247,oilrig,outdoor,a photo of oilrig
+248,operating_room,indoor,a photo of operating room
+249,orchard,outdoor,a photo of orchard
+250,orchestra_pit,indoor,a photo of orchestra pit
+251,pagoda,outdoor,a photo of pagoda
+252,palace,outdoor,a photo of palace
+253,pantry,indoor,a photo of pantry
+254,park,outdoor,a photo of park
+255,parking_garage/indoor,indoor,a photo of parking garage indoor
+256,parking_garage/outdoor,outdoor,a photo of parking garage outdoor
+257,parking_lot,outdoor,a photo of parking lot
+258,pasture,outdoor,a photo of pasture
+259,patio,outdoor,a photo of patio
+260,pavilion,outdoor,a photo of pavilion
+261,pet_shop,indoor,a photo of pet shop
+262,pharmacy,indoor,a photo of pharmacy
+263,phone_booth,outdoor,a photo of phone booth
+264,physics_laboratory,indoor,a photo of physics laboratory
+265,picnic_area,outdoor,a photo of picnic area
+266,pier,outdoor,a photo of pier
+267,pizzeria,indoor,a photo of pizzeria
+268,playground,outdoor,a photo of playground
+269,playroom,indoor,a photo of playroom
+270,plaza,outdoor,a photo of plaza
+271,pond,outdoor,a photo of pond
+272,porch,outdoor,a photo of porch
+273,promenade,outdoor,a photo of promenade
+274,pub/indoor,indoor,a photo of pub indoor
+275,racecourse,outdoor,a photo of racecourse
+276,raceway,outdoor,a photo of raceway
+277,raft,outdoor,a photo of raft
+278,railroad_track,outdoor,a photo of railroad track
+279,rainforest,outdoor,a photo of rainforest
+280,reception,indoor,a photo of reception
+281,recreation_room,indoor,a photo of recreation room
+282,repair_shop,indoor,a photo of repair shop
+283,residential_neighborhood,outdoor,a photo of residential neighborhood
+284,restaurant,indoor,a photo of restaurant
+285,restaurant_kitchen,indoor,a photo of restaurant kitchen
+286,restaurant_patio,outdoor,a photo of restaurant patio
+287,rice_paddy,outdoor,a photo of rice paddy
+288,river,outdoor,a photo of river
+289,rock_arch,outdoor,a photo of rock arch
+290,roof_garden,outdoor,a photo of roof garden
+291,rope_bridge,outdoor,a photo of rope bridge
+292,ruin,outdoor,a photo of ruin
+293,runway,outdoor,a photo of runway
+294,sandbox,outdoor,a photo of sandbox
+295,sauna,indoor,a photo of sauna
+296,schoolhouse,outdoor,a photo of schoolhouse
+297,science_museum,indoor,a photo of science museum
+298,server_room,indoor,a photo of server room
+299,shed,outdoor,a photo of shed
+300,shoe_shop,indoor,a photo of shoe shop
+301,shopfront,outdoor,a photo of shopfront
+302,shopping_mall/indoor,indoor,a photo of shopping mall indoor
+303,shower,indoor,a photo of shower
+304,ski_resort,outdoor,a photo of ski resort
+305,ski_slope,outdoor,a photo of ski slope
+306,sky,outdoor,a photo of sky
+307,skyscraper,outdoor,a photo of skyscraper
+308,slum,outdoor,a photo of slum
+309,snowfield,outdoor,a photo of snowfield
+310,soccer_field,outdoor,a photo of soccer field
+311,stable,indoor,a photo of stable
+312,stadium/baseball,outdoor,a photo of stadium baseball
+313,stadium/football,outdoor,a photo of stadium football
+314,stadium/soccer,outdoor,a photo of stadium soccer
+315,stage/indoor,indoor,a photo of stage indoor
+316,stage/outdoor,outdoor,a photo of stage outdoor
+317,staircase,indoor,a photo of staircase
+318,storage_room,indoor,a photo of storage room
+319,street,outdoor,a photo of street
+320,subway_station/platform,indoor,a photo of subway station platform
+321,supermarket,indoor,a photo of supermarket
+322,sushi_bar,indoor,a photo of sushi bar
+323,swamp,outdoor,a photo of swamp
+324,swimming_hole,indoor,a photo of swimming hole
+325,swimming_pool/indoor,indoor,a photo of swimming pool indoor
+326,swimming_pool/outdoor,outdoor,a photo of swimming pool outdoor
+327,synagogue/outdoor,outdoor,a photo of synagogue outdoor
+328,television_room,indoor,a photo of television room
+329,television_studio,indoor,a photo of television studio
+330,temple/asia,outdoor,a photo of temple asia
+331,throne_room,indoor,a photo of throne room
+332,ticket_booth,indoor,a photo of ticket booth
+333,topiary_garden,outdoor,a photo of topiary garden
+334,tower,outdoor,a photo of tower
+335,toyshop,indoor,a photo of toyshop
+336,train_interior,indoor,a photo of train interior
+337,train_station/platform,indoor,a photo of train station platform
+338,tree_farm,outdoor,a photo of tree farm
+339,tree_house,outdoor,a photo of tree house
+340,trench,outdoor,a photo of trench
+341,tundra,outdoor,a photo of tundra
+342,underwater/ocean_deep,outdoor,a photo of underwater ocean deep
+343,utility_room,indoor,a photo of utility room
+344,valley,outdoor,a photo of valley
+345,vegetable_garden,outdoor,a photo of vegetable garden
+346,veterinarians_office,indoor,a photo of veterinarians office
+347,viaduct,outdoor,a photo of viaduct
+348,village,outdoor,a photo of village
+349,vineyard,outdoor,a photo of vineyard
+350,volcano,outdoor,a photo of volcano
+351,volleyball_court/outdoor,outdoor,a photo of volleyball court outdoor
+352,waiting_room,indoor,a photo of waiting room
+353,water_park,outdoor,a photo of water park
+354,water_tower,outdoor,a photo of water tower
+355,waterfall,outdoor,a photo of waterfall
+356,watering_hole,outdoor,a photo of watering hole
+357,wave,outdoor,a photo of wave
+358,wet_bar,indoor,a photo of wet bar
+359,wheat_field,outdoor,a photo of wheat field
+360,wind_farm,outdoor,a photo of wind farm
+361,windmill,outdoor,a photo of windmill
+362,yard,outdoor,a photo of yard
+363,youth_hostel,indoor,a photo of youth hostel
+364,zen_garden,outdoor,a photo of zen garden

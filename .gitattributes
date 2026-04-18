@@ -1,0 +1,13 @@
+# Normalizza line endings
+* text=auto
+
+# Script Python 
+scripts/*.py text eol=lf
+
+# Dati
+*.csv text eol=lf
+*.txt text eol=lf
+*.npy binary
+*.png binary
+*.jpg binary
+*.jpeg binary

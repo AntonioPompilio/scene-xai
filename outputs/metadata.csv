@@ -1,0 +1,366 @@
+idx,scene_path,full_name,display,letter,io,train_count
+0,/a/airfield,airfield,airfield,a,outdoor,5000
+1,/a/airplane_cabin,airplane_cabin,airplane cabin,a,indoor,5000
+2,/a/airport_terminal,airport_terminal,airport terminal,a,indoor,5000
+3,/a/alcove,alcove,alcove,a,indoor,5000
+4,/a/alley,alley,alley,a,outdoor,5000
+5,/a/amphitheater,amphitheater,amphitheater,a,outdoor,5000
+6,/a/amusement_arcade,amusement_arcade,amusement arcade,a,indoor,5000
+7,/a/amusement_park,amusement_park,amusement park,a,outdoor,5000
+8,/a/apartment_building/outdoor,apartment_building/outdoor,outdoor,a,outdoor,5000
+9,/a/aquarium,aquarium,aquarium,a,indoor,5000
+10,/a/aqueduct,aqueduct,aqueduct,a,outdoor,5000
+11,/a/arcade,arcade,arcade,a,indoor,5000
+12,/a/arch,arch,arch,a,outdoor,5000
+13,/a/archaelogical_excavation,archaelogical_excavation,archaelogical excavation,a,indoor,5000
+14,/a/archive,archive,archive,a,indoor,5000
+15,/a/arena/hockey,arena/hockey,hockey,a,indoor,5000
+16,/a/arena/performance,arena/performance,performance,a,indoor,5000
+17,/a/arena/rodeo,arena/rodeo,rodeo,a,indoor,5000
+18,/a/army_base,army_base,army base,a,outdoor,5000
+19,/a/art_gallery,art_gallery,art gallery,a,indoor,5000
+20,/a/art_school,art_school,art school,a,indoor,5000
+21,/a/art_studio,art_studio,art studio,a,indoor,5000
+22,/a/artists_loft,artists_loft,artists loft,a,indoor,5000
+23,/a/assembly_line,assembly_line,assembly line,a,indoor,4168
+24,/a/athletic_field/outdoor,athletic_field/outdoor,outdoor,a,outdoor,5000
+25,/a/atrium/public,atrium/public,public,a,indoor,5000
+26,/a/attic,attic,attic,a,indoor,5000
+27,/a/auditorium,auditorium,auditorium,a,indoor,5000
+28,/a/auto_factory,auto_factory,auto factory,a,indoor,5000
+29,/a/auto_showroom,auto_showroom,auto showroom,a,indoor,5000
+30,/b/badlands,badlands,badlands,b,outdoor,5000
+31,/b/bakery/shop,bakery/shop,shop,b,indoor,5000
+32,/b/balcony/exterior,balcony/exterior,exterior,b,outdoor,5000
+33,/b/balcony/interior,balcony/interior,interior,b,outdoor,5000
+34,/b/ball_pit,ball_pit,ball pit,b,indoor,5000
+35,/b/ballroom,ballroom,ballroom,b,indoor,5000
+36,/b/bamboo_forest,bamboo_forest,bamboo forest,b,outdoor,5000
+37,/b/bank_vault,bank_vault,bank vault,b,indoor,3500
+38,/b/banquet_hall,banquet_hall,banquet hall,b,indoor,5000
+39,/b/bar,bar,bar,b,indoor,5000
+40,/b/barn,barn,barn,b,outdoor,5000
+41,/b/barndoor,barndoor,barndoor,b,outdoor,5000
+42,/b/baseball_field,baseball_field,baseball field,b,outdoor,5000
+43,/b/basement,basement,basement,b,indoor,5000
+44,/b/basketball_court/indoor,basketball_court/indoor,indoor,b,indoor,5000
+45,/b/bathroom,bathroom,bathroom,b,indoor,5000
+46,/b/bazaar/indoor,bazaar/indoor,indoor,b,indoor,4421
+47,/b/bazaar/outdoor,bazaar/outdoor,outdoor,b,outdoor,5000
+48,/b/beach,beach,beach,b,outdoor,5000
+49,/b/beach_house,beach_house,beach house,b,outdoor,5000
+50,/b/beauty_salon,beauty_salon,beauty salon,b,indoor,5000
+51,/b/bedchamber,bedchamber,bedchamber,b,indoor,5000
+52,/b/bedroom,bedroom,bedroom,b,indoor,5000
+53,/b/beer_garden,beer_garden,beer garden,b,outdoor,5000
+54,/b/beer_hall,beer_hall,beer hall,b,indoor,5000
+55,/b/berth,berth,berth,b,indoor,5000
+56,/b/biology_laboratory,biology_laboratory,biology laboratory,b,indoor,3469
+57,/b/boardwalk,boardwalk,boardwalk,b,outdoor,5000
+58,/b/boat_deck,boat_deck,boat deck,b,outdoor,5000
+59,/b/boathouse,boathouse,boathouse,b,outdoor,5000
+60,/b/bookstore,bookstore,bookstore,b,indoor,5000
+61,/b/booth/indoor,booth/indoor,indoor,b,indoor,5000
+62,/b/botanical_garden,botanical_garden,botanical garden,b,outdoor,5000
+63,/b/bow_window/indoor,bow_window/indoor,indoor,b,indoor,5000
+64,/b/bowling_alley,bowling_alley,bowling alley,b,indoor,5000
+65,/b/boxing_ring,boxing_ring,boxing ring,b,indoor,5000
+66,/b/bridge,bridge,bridge,b,outdoor,5000
+67,/b/building_facade,building_facade,building facade,b,outdoor,5000
+68,/b/bullring,bullring,bullring,b,outdoor,4681
+69,/b/burial_chamber,burial_chamber,burial chamber,b,indoor,5000
+70,/b/bus_interior,bus_interior,bus interior,b,indoor,5000
+71,/b/bus_station/indoor,bus_station/indoor,indoor,b,indoor,5000
+72,/b/butchers_shop,butchers_shop,butchers shop,b,indoor,5000
+73,/b/butte,butte,butte,b,outdoor,5000
+74,/c/cabin/outdoor,cabin/outdoor,outdoor,c,outdoor,5000
+75,/c/cafeteria,cafeteria,cafeteria,c,indoor,5000
+76,/c/campsite,campsite,campsite,c,outdoor,5000
+77,/c/campus,campus,campus,c,outdoor,5000
+78,/c/canal/natural,canal/natural,natural,c,outdoor,5000
+79,/c/canal/urban,canal/urban,urban,c,outdoor,5000
+80,/c/candy_store,candy_store,candy store,c,indoor,5000
+81,/c/canyon,canyon,canyon,c,outdoor,5000
+82,/c/car_interior,car_interior,car interior,c,indoor,5000
+83,/c/carrousel,carrousel,carrousel,c,outdoor,5000
+84,/c/castle,castle,castle,c,outdoor,5000
+85,/c/catacomb,catacomb,catacomb,c,indoor,5000
+86,/c/cemetery,cemetery,cemetery,c,outdoor,5000
+87,/c/chalet,chalet,chalet,c,outdoor,5000
+88,/c/chemistry_lab,chemistry_lab,chemistry lab,c,indoor,3447
+89,/c/childs_room,childs_room,childs room,c,indoor,5000
+90,/c/church/indoor,church/indoor,indoor,c,indoor,5000
+91,/c/church/outdoor,church/outdoor,outdoor,c,outdoor,5000
+92,/c/classroom,classroom,classroom,c,indoor,5000
+93,/c/clean_room,clean_room,clean room,c,indoor,3871
+94,/c/cliff,cliff,cliff,c,outdoor,5000
+95,/c/closet,closet,closet,c,indoor,5000
+96,/c/clothing_store,clothing_store,clothing store,c,indoor,5000
+97,/c/coast,coast,coast,c,outdoor,5000
+98,/c/cockpit,cockpit,cockpit,c,indoor,5000
+99,/c/coffee_shop,coffee_shop,coffee shop,c,indoor,5000
+100,/c/computer_room,computer_room,computer room,c,indoor,3619
+101,/c/conference_center,conference_center,conference center,c,indoor,5000
+102,/c/conference_room,conference_room,conference room,c,indoor,5000
+103,/c/construction_site,construction_site,construction site,c,outdoor,5000
+104,/c/corn_field,corn_field,corn field,c,outdoor,5000
+105,/c/corral,corral,corral,c,outdoor,5000
+106,/c/corridor,corridor,corridor,c,indoor,5000
+107,/c/cottage,cottage,cottage,c,outdoor,5000
+108,/c/courthouse,courthouse,courthouse,c,outdoor,5000
+109,/c/courtyard,courtyard,courtyard,c,outdoor,5000
+110,/c/creek,creek,creek,c,outdoor,5000
+111,/c/crevasse,crevasse,crevasse,c,outdoor,4457
+112,/c/crosswalk,crosswalk,crosswalk,c,outdoor,5000
+113,/d/dam,dam,dam,d,outdoor,5000
+114,/d/delicatessen,delicatessen,delicatessen,d,indoor,5000
+115,/d/department_store,department_store,department store,d,indoor,5000
+116,/d/desert/sand,desert/sand,sand,d,outdoor,5000
+117,/d/desert/vegetation,desert/vegetation,vegetation,d,outdoor,5000
+118,/d/desert_road,desert_road,desert road,d,outdoor,5000
+119,/d/diner/outdoor,diner/outdoor,outdoor,d,outdoor,5000
+120,/d/dining_hall,dining_hall,dining hall,d,indoor,5000
+121,/d/dining_room,dining_room,dining room,d,indoor,5000
+122,/d/discotheque,discotheque,discotheque,d,indoor,5000
+123,/d/doorway/outdoor,doorway/outdoor,outdoor,d,outdoor,5000
+124,/d/dorm_room,dorm_room,dorm room,d,indoor,5000
+125,/d/downtown,downtown,downtown,d,outdoor,5000
+126,/d/dressing_room,dressing_room,dressing room,d,indoor,3068
+127,/d/driveway,driveway,driveway,d,outdoor,5000
+128,/d/drugstore,drugstore,drugstore,d,indoor,3781
+129,/e/elevator/door,elevator/door,door,e,indoor,4461
+130,/e/elevator_lobby,elevator_lobby,elevator lobby,e,indoor,5000
+131,/e/elevator_shaft,elevator_shaft,elevator shaft,e,indoor,5000
+132,/e/embassy,embassy,embassy,e,outdoor,5000
+133,/e/engine_room,engine_room,engine room,e,indoor,5000
+134,/e/entrance_hall,entrance_hall,entrance hall,e,indoor,5000
+135,/e/escalator/indoor,escalator/indoor,indoor,e,indoor,4254
+136,/e/excavation,excavation,excavation,e,outdoor,5000
+137,/f/fabric_store,fabric_store,fabric store,f,indoor,3858
+138,/f/farm,farm,farm,f,outdoor,5000
+139,/f/fastfood_restaurant,fastfood_restaurant,fastfood restaurant,f,indoor,5000
+140,/f/field/cultivated,field/cultivated,cultivated,f,outdoor,5000
+141,/f/field/wild,field/wild,wild,f,outdoor,5000
+142,/f/field_road,field_road,field road,f,outdoor,5000
+143,/f/fire_escape,fire_escape,fire escape,f,outdoor,5000
+144,/f/fire_station,fire_station,fire station,f,outdoor,5000
+145,/f/fishpond,fishpond,fishpond,f,outdoor,5000
+146,/f/flea_market/indoor,flea_market/indoor,indoor,f,indoor,5000
+147,/f/florist_shop/indoor,florist_shop/indoor,indoor,f,indoor,5000
+148,/f/food_court,food_court,food court,f,indoor,5000
+149,/f/football_field,football_field,football field,f,outdoor,5000
+150,/f/forest/broadleaf,forest/broadleaf,broadleaf,f,outdoor,5000
+151,/f/forest_path,forest_path,forest path,f,outdoor,5000
+152,/f/forest_road,forest_road,forest road,f,outdoor,5000
+153,/f/formal_garden,formal_garden,formal garden,f,outdoor,5000
+154,/f/fountain,fountain,fountain,f,outdoor,5000
+155,/g/galley,galley,galley,g,indoor,4330
+156,/g/garage/indoor,garage/indoor,indoor,g,indoor,5000
+157,/g/garage/outdoor,garage/outdoor,outdoor,g,outdoor,5000
+158,/g/gas_station,gas_station,gas station,g,outdoor,5000
+159,/g/gazebo/exterior,gazebo/exterior,exterior,g,outdoor,5000
+160,/g/general_store/indoor,general_store/indoor,indoor,g,indoor,4735
+161,/g/general_store/outdoor,general_store/outdoor,outdoor,g,outdoor,5000
+162,/g/gift_shop,gift_shop,gift shop,g,indoor,5000
+163,/g/glacier,glacier,glacier,g,outdoor,5000
+164,/g/golf_course,golf_course,golf course,g,outdoor,5000
+165,/g/greenhouse/indoor,greenhouse/indoor,indoor,g,indoor,5000
+166,/g/greenhouse/outdoor,greenhouse/outdoor,outdoor,g,outdoor,4939
+167,/g/grotto,grotto,grotto,g,outdoor,5000
+168,/g/gymnasium/indoor,gymnasium/indoor,indoor,g,indoor,4906
+169,/h/hangar/indoor,hangar/indoor,indoor,h,indoor,5000
+170,/h/hangar/outdoor,hangar/outdoor,outdoor,h,outdoor,5000
+171,/h/harbor,harbor,harbor,h,outdoor,5000
+172,/h/hardware_store,hardware_store,hardware store,h,indoor,5000
+173,/h/hayfield,hayfield,hayfield,h,outdoor,5000
+174,/h/heliport,heliport,heliport,h,outdoor,5000
+175,/h/highway,highway,highway,h,outdoor,5000
+176,/h/home_office,home_office,home office,h,indoor,5000
+177,/h/home_theater,home_theater,home theater,h,indoor,5000
+178,/h/hospital,hospital,hospital,h,outdoor,5000
+179,/h/hospital_room,hospital_room,hospital room,h,indoor,5000
+180,/h/hot_spring,hot_spring,hot spring,h,outdoor,5000
+181,/h/hotel/outdoor,hotel/outdoor,outdoor,h,outdoor,5000
+182,/h/hotel_room,hotel_room,hotel room,h,indoor,5000
+183,/h/house,house,house,h,outdoor,5000
+184,/h/hunting_lodge/outdoor,hunting_lodge/outdoor,outdoor,h,outdoor,5000
+185,/i/ice_cream_parlor,ice_cream_parlor,ice cream parlor,i,indoor,5000
+186,/i/ice_floe,ice_floe,ice floe,i,outdoor,5000
+187,/i/ice_shelf,ice_shelf,ice shelf,i,outdoor,5000
+188,/i/ice_skating_rink/indoor,ice_skating_rink/indoor,indoor,i,indoor,4104
+189,/i/ice_skating_rink/outdoor,ice_skating_rink/outdoor,outdoor,i,outdoor,5000
+190,/i/iceberg,iceberg,iceberg,i,outdoor,5000
+191,/i/igloo,igloo,igloo,i,outdoor,5000
+192,/i/industrial_area,industrial_area,industrial area,i,outdoor,5000
+193,/i/inn/outdoor,inn/outdoor,outdoor,i,outdoor,5000
+194,/i/islet,islet,islet,i,outdoor,5000
+195,/j/jacuzzi/indoor,jacuzzi/indoor,indoor,j,indoor,3116
+196,/j/jail_cell,jail_cell,jail cell,j,indoor,5000
+197,/j/japanese_garden,japanese_garden,japanese garden,j,outdoor,5000
+198,/j/jewelry_shop,jewelry_shop,jewelry shop,j,indoor,5000
+199,/j/junkyard,junkyard,junkyard,j,outdoor,5000
+200,/k/kasbah,kasbah,kasbah,k,outdoor,5000
+201,/k/kennel/outdoor,kennel/outdoor,outdoor,k,outdoor,5000
+202,/k/kindergarden_classroom,kindergarden_classroom,kindergarden classroom,k,indoor,5000
+203,/k/kitchen,kitchen,kitchen,k,indoor,5000
+204,/l/lagoon,lagoon,lagoon,l,outdoor,5000
+205,/l/lake/natural,lake/natural,natural,l,outdoor,5000
+206,/l/landfill,landfill,landfill,l,outdoor,5000
+207,/l/landing_deck,landing_deck,landing deck,l,outdoor,5000
+208,/l/laundromat,laundromat,laundromat,l,indoor,5000
+209,/l/lawn,lawn,lawn,l,outdoor,5000
+210,/l/lecture_room,lecture_room,lecture room,l,indoor,5000
+211,/l/legislative_chamber,legislative_chamber,legislative chamber,l,indoor,5000
+212,/l/library/indoor,library/indoor,indoor,l,indoor,5000
+213,/l/library/outdoor,library/outdoor,outdoor,l,outdoor,5000
+214,/l/lighthouse,lighthouse,lighthouse,l,outdoor,5000
+215,/l/living_room,living_room,living room,l,indoor,5000
+216,/l/loading_dock,loading_dock,loading dock,l,outdoor,5000
+217,/l/lobby,lobby,lobby,l,indoor,5000
+218,/l/lock_chamber,lock_chamber,lock chamber,l,outdoor,5000
+219,/l/locker_room,locker_room,locker room,l,indoor,5000
+220,/m/mansion,mansion,mansion,m,outdoor,5000
+221,/m/manufactured_home,manufactured_home,manufactured home,m,outdoor,5000
+222,/m/market/indoor,market/indoor,indoor,m,indoor,4266
+223,/m/market/outdoor,market/outdoor,outdoor,m,outdoor,5000
+224,/m/marsh,marsh,marsh,m,outdoor,5000
+225,/m/martial_arts_gym,martial_arts_gym,martial arts gym,m,indoor,5000
+226,/m/mausoleum,mausoleum,mausoleum,m,outdoor,5000
+227,/m/medina,medina,medina,m,outdoor,5000
+228,/m/mezzanine,mezzanine,mezzanine,m,indoor,5000
+229,/m/moat/water,moat/water,water,m,outdoor,5000
+230,/m/mosque/outdoor,mosque/outdoor,outdoor,m,outdoor,5000
+231,/m/motel,motel,motel,m,outdoor,5000
+232,/m/mountain,mountain,mountain,m,outdoor,5000
+233,/m/mountain_path,mountain_path,mountain path,m,outdoor,5000
+234,/m/mountain_snowy,mountain_snowy,mountain snowy,m,outdoor,5000
+235,/m/movie_theater/indoor,movie_theater/indoor,indoor,m,indoor,5000
+236,/m/museum/indoor,museum/indoor,indoor,m,indoor,5000
+237,/m/museum/outdoor,museum/outdoor,outdoor,m,outdoor,5000
+238,/m/music_studio,music_studio,music studio,m,indoor,5000
+239,/n/natural_history_museum,natural_history_museum,natural history museum,n,indoor,5000
+240,/n/nursery,nursery,nursery,n,indoor,5000
+241,/n/nursing_home,nursing_home,nursing home,n,indoor,5000
+242,/o/oast_house,oast_house,oast house,o,outdoor,5000
+243,/o/ocean,ocean,ocean,o,outdoor,5000
+244,/o/office,office,office,o,indoor,5000
+245,/o/office_building,office_building,office building,o,outdoor,5000
+246,/o/office_cubicles,office_cubicles,office cubicles,o,indoor,5000
+247,/o/oilrig,oilrig,oilrig,o,outdoor,5000
+248,/o/operating_room,operating_room,operating room,o,indoor,4826
+249,/o/orchard,orchard,orchard,o,outdoor,5000
+250,/o/orchestra_pit,orchestra_pit,orchestra pit,o,indoor,5000
+251,/p/pagoda,pagoda,pagoda,p,outdoor,5000
+252,/p/palace,palace,palace,p,outdoor,5000
+253,/p/pantry,pantry,pantry,p,indoor,5000
+254,/p/park,park,park,p,outdoor,5000
+255,/p/parking_garage/indoor,parking_garage/indoor,indoor,p,indoor,5000
+256,/p/parking_garage/outdoor,parking_garage/outdoor,outdoor,p,outdoor,5000
+257,/p/parking_lot,parking_lot,parking lot,p,outdoor,5000
+258,/p/pasture,pasture,pasture,p,outdoor,5000
+259,/p/patio,patio,patio,p,outdoor,5000
+260,/p/pavilion,pavilion,pavilion,p,outdoor,5000
+261,/p/pet_shop,pet_shop,pet shop,p,indoor,4988
+262,/p/pharmacy,pharmacy,pharmacy,p,indoor,5000
+263,/p/phone_booth,phone_booth,phone booth,p,outdoor,5000
+264,/p/physics_laboratory,physics_laboratory,physics laboratory,p,indoor,5000
+265,/p/picnic_area,picnic_area,picnic area,p,outdoor,5000
+266,/p/pier,pier,pier,p,outdoor,5000
+267,/p/pizzeria,pizzeria,pizzeria,p,indoor,5000
+268,/p/playground,playground,playground,p,outdoor,5000
+269,/p/playroom,playroom,playroom,p,indoor,5000
+270,/p/plaza,plaza,plaza,p,outdoor,5000
+271,/p/pond,pond,pond,p,outdoor,5000
+272,/p/porch,porch,porch,p,outdoor,5000
+273,/p/promenade,promenade,promenade,p,outdoor,5000
+274,/p/pub/indoor,pub/indoor,indoor,p,indoor,5000
+275,/r/racecourse,racecourse,racecourse,r,outdoor,5000
+276,/r/raceway,raceway,raceway,r,outdoor,5000
+277,/r/raft,raft,raft,r,outdoor,5000
+278,/r/railroad_track,railroad_track,railroad track,r,outdoor,5000
+279,/r/rainforest,rainforest,rainforest,r,outdoor,5000
+280,/r/reception,reception,reception,r,indoor,5000
+281,/r/recreation_room,recreation_room,recreation room,r,indoor,5000
+282,/r/repair_shop,repair_shop,repair shop,r,indoor,5000
+283,/r/residential_neighborhood,residential_neighborhood,residential neighborhood,r,outdoor,5000
+284,/r/restaurant,restaurant,restaurant,r,indoor,5000
+285,/r/restaurant_kitchen,restaurant_kitchen,restaurant kitchen,r,indoor,5000
+286,/r/restaurant_patio,restaurant_patio,restaurant patio,r,outdoor,5000
+287,/r/rice_paddy,rice_paddy,rice paddy,r,outdoor,5000
+288,/r/river,river,river,r,outdoor,5000
+289,/r/rock_arch,rock_arch,rock arch,r,outdoor,5000
+290,/r/roof_garden,roof_garden,roof garden,r,outdoor,5000
+291,/r/rope_bridge,rope_bridge,rope bridge,r,outdoor,5000
+292,/r/ruin,ruin,ruin,r,outdoor,5000
+293,/r/runway,runway,runway,r,outdoor,5000
+294,/s/sandbox,sandbox,sandbox,s,outdoor,5000
+295,/s/sauna,sauna,sauna,s,indoor,4020
+296,/s/schoolhouse,schoolhouse,schoolhouse,s,outdoor,5000
+297,/s/science_museum,science_museum,science museum,s,indoor,5000
+298,/s/server_room,server_room,server room,s,indoor,5000
+299,/s/shed,shed,shed,s,outdoor,5000
+300,/s/shoe_shop,shoe_shop,shoe shop,s,indoor,5000
+301,/s/shopfront,shopfront,shopfront,s,outdoor,5000
+302,/s/shopping_mall/indoor,shopping_mall/indoor,indoor,s,indoor,5000
+303,/s/shower,shower,shower,s,indoor,5000
+304,/s/ski_resort,ski_resort,ski resort,s,outdoor,5000
+305,/s/ski_slope,ski_slope,ski slope,s,outdoor,5000
+306,/s/sky,sky,sky,s,outdoor,5000
+307,/s/skyscraper,skyscraper,skyscraper,s,outdoor,5000
+308,/s/slum,slum,slum,s,outdoor,5000
+309,/s/snowfield,snowfield,snowfield,s,outdoor,5000
+310,/s/soccer_field,soccer_field,soccer field,s,outdoor,5000
+311,/s/stable,stable,stable,s,indoor,5000
+312,/s/stadium/baseball,stadium/baseball,baseball,s,outdoor,5000
+313,/s/stadium/football,stadium/football,football,s,outdoor,5000
+314,/s/stadium/soccer,stadium/soccer,soccer,s,outdoor,5000
+315,/s/stage/indoor,stage/indoor,indoor,s,indoor,5000
+316,/s/stage/outdoor,stage/outdoor,outdoor,s,outdoor,5000
+317,/s/staircase,staircase,staircase,s,indoor,5000
+318,/s/storage_room,storage_room,storage room,s,indoor,5000
+319,/s/street,street,street,s,outdoor,5000
+320,/s/subway_station/platform,subway_station/platform,platform,s,indoor,5000
+321,/s/supermarket,supermarket,supermarket,s,indoor,5000
+322,/s/sushi_bar,sushi_bar,sushi bar,s,indoor,5000
+323,/s/swamp,swamp,swamp,s,outdoor,5000
+324,/s/swimming_hole,swimming_hole,swimming hole,s,indoor,5000
+325,/s/swimming_pool/indoor,swimming_pool/indoor,indoor,s,indoor,5000
+326,/s/swimming_pool/outdoor,swimming_pool/outdoor,outdoor,s,outdoor,5000
+327,/s/synagogue/outdoor,synagogue/outdoor,outdoor,s,outdoor,5000
+328,/t/television_room,television_room,television room,t,indoor,5000
+329,/t/television_studio,television_studio,television studio,t,indoor,5000
+330,/t/temple/asia,temple/asia,asia,t,outdoor,5000
+331,/t/throne_room,throne_room,throne room,t,indoor,5000
+332,/t/ticket_booth,ticket_booth,ticket booth,t,indoor,5000
+333,/t/topiary_garden,topiary_garden,topiary garden,t,outdoor,5000
+334,/t/tower,tower,tower,t,outdoor,5000
+335,/t/toyshop,toyshop,toyshop,t,indoor,5000
+336,/t/train_interior,train_interior,train interior,t,indoor,5000
+337,/t/train_station/platform,train_station/platform,platform,t,indoor,5000
+338,/t/tree_farm,tree_farm,tree farm,t,outdoor,5000
+339,/t/tree_house,tree_house,tree house,t,outdoor,5000
+340,/t/trench,trench,trench,t,outdoor,5000
+341,/t/tundra,tundra,tundra,t,outdoor,5000
+342,/u/underwater/ocean_deep,underwater/ocean_deep,ocean deep,u,outdoor,5000
+343,/u/utility_room,utility_room,utility room,u,indoor,5000
+344,/v/valley,valley,valley,v,outdoor,5000
+345,/v/vegetable_garden,vegetable_garden,vegetable garden,v,outdoor,5000
+346,/v/veterinarians_office,veterinarians_office,veterinarians office,v,indoor,4809
+347,/v/viaduct,viaduct,viaduct,v,outdoor,5000
+348,/v/village,village,village,v,outdoor,5000
+349,/v/vineyard,vineyard,vineyard,v,outdoor,5000
+350,/v/volcano,volcano,volcano,v,outdoor,5000
+351,/v/volleyball_court/outdoor,volleyball_court/outdoor,outdoor,v,outdoor,4366
+352,/w/waiting_room,waiting_room,waiting room,w,indoor,5000
+353,/w/water_park,water_park,water park,w,outdoor,5000
+354,/w/water_tower,water_tower,water tower,w,outdoor,5000
+355,/w/waterfall,waterfall,waterfall,w,outdoor,5000
+356,/w/watering_hole,watering_hole,watering hole,w,outdoor,5000
+357,/w/wave,wave,wave,w,outdoor,5000
+358,/w/wet_bar,wet_bar,wet bar,w,indoor,5000
+359,/w/wheat_field,wheat_field,wheat field,w,outdoor,5000
+360,/w/wind_farm,wind_farm,wind farm,w,outdoor,5000
+361,/w/windmill,windmill,windmill,w,outdoor,5000
+362,/y/yard,yard,yard,y,outdoor,5000
+363,/y/youth_hostel,youth_hostel,youth hostel,y,indoor,5000
+364,/z/zen_garden,zen_garden,zen garden,z,outdoor,5000

@@ -1,0 +1,52 @@
+# Dataset images 
+train/
+val/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Ambienti virtuali
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# File temporanei / log
+*.log
+*.tmp
+*.bak
+
+# Claude Code internals
+.claude/
+
+# Output grandi (embedding matrices già generate, opzionale: rimuovi se vuoi versioning)
+outputs/clip_text_embeddings.npy
+outputs/clip_cosine_similarity.npy
+
+#file di claude 
+.claudeignore
+.CLAUDE.md
