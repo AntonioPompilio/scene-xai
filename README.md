@@ -2,7 +2,7 @@
 
 **Interpretable urban scene classification via CLIP + Matryoshka Sparse Autoencoders + Fuzzy Inference**
 
-Master's thesis project — ongoing
+Bachelor's thesis project 
 
 ---
 
