@@ -1,6 +1,9 @@
-# Dataset images 
+# Dataset images
 train/
 val/
+
+# Subset di output (Phase 5)
+output_subset/
 
 # Python
 __pycache__/

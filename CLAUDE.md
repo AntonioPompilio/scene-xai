@@ -122,10 +122,9 @@ Hierarchical Sparse Autoencoders" (arXiv 2502.20578, ICML 2025)
 ## Step Successivi
 
 ### Phase 5 — Subset Selection
-**Cosa**: selezionare 1 categoria rappresentativa per cluster (più vicina al centroide K-Means).
+**Cosa**: selezionare 3 categorie per cluster in maniera casuale(dal clustering con k = 13), di queste classi estrarre 750 immagini in maniera casuale 
 **Input**: clustering_results.csv + embeddings CLIP
-**Output**: CSV con 13 categorie selezionate, statistiche (n. immagini train/val, indoor/outdoor).
-**Da discutere con i relatori**: validare il subset finale e decidere se usare k=13 o un altro k.
+**Output**: subset su cui poi verrà addestrato lo sparse autoencoder
 
 ## Vocabolario semantico
 SUN Attributes (Patterson & Hays, CVPR 2012)

@@ -73,7 +73,7 @@ def sample_paths(paths: list, n: int, seed: int = SEED) -> list:
 
 #carica un'immagine, la ridimensiona a 128 x 128 (non 256 x 256 per velocità e per mantenere abbastanza dettaglio per le statistiche qualitative)
 #restituisce un array numpy con i valori RGB (float32 per i calcoli, ma in scala 0-255, che poi verrà normalizzato in [0.0, 1.0] dividendo per 255.0)
-def load_image_rgb(path: Path, size: int = 128) -> np.ndarray:
+def load_image_rgb(path: Path, size: int ) -> np.ndarray:
 
     with Image.open(path) as img: #apre l'immagine usando PIL, with garantisce che il file venga chiuso dopo l'uso
         img = img.convert("RGB").resize((size, size), Image.BILINEAR) # scompone la matrice originale dell'immagine in 3 matrici(R, G , B) e le combina in un'unica matrice tridimensionale, poi l'immagine viene ridimensionata a 128 x 128 usando l'interpolazione bilineare (Image.BILINEAR), una "compressione intelligente" dell'immagine che è un buon compromesso tra qualità e velocità per questo scopo
@@ -110,16 +110,16 @@ def compute_image_stats(img_array: np.ndarray) -> dict:
 
     # Saturazione HSV 
     #per ogni singolo pixel ,prendo il valore massimo e minimo tra i 3 canali RGB, calcolo la differenza (delta) e poi divido per il massimo per ottenere la saturazione. Se il massimo è 0 (pixel nero), la saturazione è definita come 0.
-    c_max = np.max(img_array, axis=2)   # prendo 
-    c_min = np.min(img_array, axis=2)   # per-pixel min dei 3 canali, shape (H, W)
+    c_max = np.max(img_array, axis=2)   # per ogni pixel dei 3 canali, prendo il valore massimo, shape (H, W) 
+    c_min = np.min(img_array, axis=2)   # per-pixel min dei 3 canali,prendo il minimo, shape (H, W)
     delta = c_max - c_min               # "chroma": ampiezza dell'intervallo cromatico
 
     # Sostituiamo i denominatori zero con 1.0 PRIMA della divisione:
     # np.where valuta entrambi i rami, quindi delta/c_max verrebbe calcolato
     # anche dove c_max==0, generando RuntimeWarning. safe_denom evita il problema.
-    safe_denom = np.where(c_max > 0.0, c_max, 1.0)
-    saturation_map = np.where(c_max > 0.0, delta / safe_denom, 0.0)
-    saturation = float(saturation_map.mean())
+    safe_denom = np.where(c_max > 0.0, c_max, 1.0)#sostituisce i valori di c_max con 1 dove c_max è 0, altrimenti lascia i valori di c_max invariati. 
+    saturation_map = np.where(c_max > 0.0, delta / safe_denom, 0.0)#calcola la saturazione pixel-wise, evitando divisioni per zero. 
+    saturation = float(saturation_map.mean())#calcolo la saturazione media su tutta l'immagine
 
     return {
         "mean_brightness": float(luminance.mean()),
