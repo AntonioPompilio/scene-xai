@@ -25,7 +25,6 @@ ENV/
 
 # Jupyter
 .ipynb_checkpoints/
-*.ipynb
 
 # IDE
 .vscode/
@@ -53,3 +52,7 @@ outputs/clip_cosine_similarity.npy
 #file di claude 
 .claudeignore
 .CLAUDE.md
+
+#file zippati del dataset
+output_subset.zip
+subset_manifest.zip

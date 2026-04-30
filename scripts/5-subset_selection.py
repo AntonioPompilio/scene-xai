@@ -20,10 +20,10 @@ Esecuzione:
 """
 
 from pathlib import Path
-import argparse
+import argparse #per gestire gli argomenti da riga di comando
 import random
-import shutil
-import sys
+import shutil #contiene il metodo copy2 per copiare i file da una cartella a un'altra mantenendo i metadati
+import sys #per leggere gli argomenti passati da riga di comando
 import pandas as pd
 from tqdm import tqdm
 
@@ -39,17 +39,22 @@ CLUSTER_COL    = f"cluster_k{K}"
 IMG_EXTS       = {".jpg", ".jpeg", ".png"}
 
 # ── Path di default ───────────────────────────────────────────────────────────
-ROOT             = Path(__file__).parent.parent
+ROOT             = Path(__file__).parent.parent # per risalire alla root originale del progetto
 DEFAULT_BASE_DIR = ROOT
 DEFAULT_OUT_DIR  = ROOT / "output_subset"
 CLUSTERING_CSV   = ROOT / "outputs" / "clustering_results.csv"
 
-
+#metodo per gestire gli argomenti da riga di comando, con valori di default e descrizioni
+#con questo modo posso runnare lo script con i valori di default o posso specificarli es:
+# Specificando tutto
+#python script.py --base-dir /path/dataset --output-dir /path/output --clustering-csv /path/clustering_result.csv
 def parse_args() -> argparse.Namespace:
+    #inizializzo il parser 
     p = argparse.ArgumentParser(description="Estrae un subset bilanciato dal dataset Places365.")
-    p.add_argument(
+    #assegna il nome --base-dir , di tipo path, il cui valore di default è il path base del progetto
+    p.add_argument( 
         "--base-dir", type=Path, default=DEFAULT_BASE_DIR,
-        help="Root del dataset Places365 (deve contenere la cartella 'train/'). "
+        help="Root del progetto dove c'è il dataset Places365 (deve contenere la cartella 'train/'). "
              f"Default: {DEFAULT_BASE_DIR}",
     )
     p.add_argument(
@@ -60,9 +65,9 @@ def parse_args() -> argparse.Namespace:
         "--clustering-csv", type=Path, default=CLUSTERING_CSV,
         help=f"Path al CSV con i risultati del clustering. Default: {CLUSTERING_CSV}",
     )
-    return p.parse_args()
+    return p.parse_args() #restituisce un oggetto con gli argomenti parsati
 
-
+#returna il folder per ogni categoria, in modo tale da risolvere i casi di categorie nidificate (es. field/cultivated) 
 def category_folder(train_root: Path, full_name: str) -> Path:
     """
     Risolve la cartella di una categoria sul filesystem.
@@ -72,7 +77,7 @@ def category_folder(train_root: Path, full_name: str) -> Path:
     letter = full_name[0]
     return train_root / letter / full_name
 
-
+#preso il patb di una categoria, restituisce la lista dei file immagine al suo interno 
 def list_images(folder: Path) -> list[Path]:
     """Restituisce tutti i file immagine nella cartella (non ricorsivo)."""
     return sorted(p for p in folder.iterdir() if p.is_file() and p.suffix.lower() in IMG_EXTS)
@@ -86,6 +91,7 @@ def main() -> int:
     train_root      = base_dir / "train"
 
     # ── Validazione input ─────────────────────────────────────────────────────
+    #nel caso in cui non venissero trovate le cartelle
     if not train_root.is_dir():
         sys.exit(f"[ERROR] Cartella train non trovata: {train_root}")
     if not clust_csv.is_file():
@@ -106,29 +112,30 @@ def main() -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     manifest_rows: list[dict] = []
     summary: list[tuple[int, list[str], int]] = []
-
+    #ciclo per ogni cluster
     for cid in cluster_ids:
-        cats_in_cluster = df.loc[df[CLUSTER_COL] == cid, "full_name"].tolist()
-        n_pick = min(N_CATS_PER_CL, len(cats_in_cluster))
-        chosen = random.sample(cats_in_cluster, n_pick)
+        cats_in_cluster = df.loc[df[CLUSTER_COL] == cid, "full_name"].tolist()#ottengo una lista delle categorie nell' i-esimo cluster
+        n_pick = min(N_CATS_PER_CL, len(cats_in_cluster))#prendo il numero di categorie da estrarre, se il cluster è troppo piccolo prenderò il numero di categorie del cluster
+        chosen = random.sample(cats_in_cluster, n_pick)#prendo 3 categorie a caso
 
         copied_in_cluster = 0
+        #ciclo per ogni categoria delle scelte dal cluster
         for cat in chosen:
-            src_folder = category_folder(train_root, cat)
+            src_folder = category_folder(train_root, cat)#ottengo il path della cartella della categoria
             if not src_folder.is_dir():
                 print(f"  [WARN] Cartella mancante per '{cat}': {src_folder} — skip")
                 continue
 
-            all_imgs = list_images(src_folder)
-            if len(all_imgs) < N_IMGS_PER_CAT:
+            all_imgs = list_images(src_folder)#ricavo le immagini per ogni categoria
+            if len(all_imgs) < N_IMGS_PER_CAT:#controlo che abbia abbastanza immagini
                 print(f"  [WARN] '{cat}' ha solo {len(all_imgs)} immagini "
                       f"(< {N_IMGS_PER_CAT}): le prendo tutte.")
             n_sample = min(N_IMGS_PER_CAT, len(all_imgs))
-            sampled = random.sample(all_imgs, n_sample)
+            sampled = random.sample(all_imgs, n_sample)#samplo le immagini da copiare
 
             dst_folder = out_dir / f"cluster_{cid}" / cat
-            dst_folder.mkdir(parents=True, exist_ok=True)
-
+            dst_folder.mkdir(parents=True, exist_ok=True)#creo la cartella dove finiranno le immagini
+            #ciclo per ogni immagine campionata, la copio nella cartella di destinazione e aggiorno il manifest
             for src in tqdm(sampled, desc=f"cluster {cid:02d} | {cat}", leave=False):
                 dst = dst_folder / src.name
                 shutil.copy2(src, dst)

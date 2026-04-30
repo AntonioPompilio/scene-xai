@@ -21,7 +21,8 @@ Hierarchical Sparse Autoencoders" (arXiv 2502.20578, ICML 2025)
 - **EDA Phase 2b ✓**: image quality analysis completata
 - **EDA Phase 3 ✓**: CLIP text embeddings completata
 - **EDA Phase 4 ✓**: clustering & visualization completata — k ottimale = 13
-- Prossimi step: Phase 5 — Subset Selection (1 categoria per cluster)
+- **Phase 5 ✓**: subset selection completata (3 categorie × 13 cluster, 750 img/cat)
+- Prossimi step: Training MSAE su subset
 
 ## EDA Completata
 
@@ -122,9 +123,16 @@ Hierarchical Sparse Autoencoders" (arXiv 2502.20578, ICML 2025)
 ## Step Successivi
 
 ### Phase 5 — Subset Selection
-**Cosa**: selezionare 3 categorie per cluster in maniera casuale(dal clustering con k = 13), di queste classi estrarre 750 immagini in maniera casuale 
-**Input**: clustering_results.csv + embeddings CLIP
-**Output**: subset su cui poi verrà addestrato lo sparse autoencoder
+**Cosa**: selezione casuale di 3 categorie per cluster (k=13), campionamento di 750 immagini per categoria, copia fisica in cartella di output strutturata.
+**Campionamento**: per ogni cluster, `random.sample(3)` sulle categorie; per ogni categoria, `random.sample(750)` sulle immagini disponibili. Seed=42.
+**Output** (`outputs/subset_manifest.csv`):
+- 13 cluster × 3 categorie × 750 immagini = ~29.250 file
+- Colonne: cluster_id, category, image_path_source, image_path_dest
+**Struttura output** (`output_subset/`):
+- `cluster_<cluster_id>/<category_name>/<image_file>.jpg`
+- Preserva categorie nidificate (es. `cluster_3/field/cultivated/img.jpg`)
+**Script**: `scripts/5-subset_selection.py` — argomenti `--base-dir`, `--output-dir`, `--clustering-csv` con sensible defaults.
+**Insights**: subset bilanciato semanticamente, ready per training MSAE.
 
 ## Vocabolario semantico
 SUN Attributes (Patterson & Hays, CVPR 2012)
@@ -139,14 +147,22 @@ SUN Attributes (Patterson & Hays, CVPR 2012)
 
 ## Struttura cartelle
 ```
-train/          # immagini training divise per lettera
-val/val_256     # immagini validation
-outputs/        # grafici e risultati analisi
-scripts/        # script Python
+train/                  # immagini training divise per lettera
+val/val_256             # immagini validation
+outputs/                # grafici e risultati analisi EDA + clustering
+  clustering_results.csv          # k=4..35
+  subset_manifest.csv             # Phase 5 output
+output_subset/          # subset finale per training MSAE (generato da Phase 5)
+  cluster_0/...
+  cluster_1/...
+  ...
+  cluster_12/...
+scripts/                # script Python
   1-metadata_EDA.py
   2-image_quality.py
   3-clip_text_embeddings.py
   4-clustering.py
+  5-subset_selection.py
 categories_places365.txt
 IO_places365.txt
 labels_sunattribute.txt
