@@ -48,6 +48,8 @@ desktop.ini
 # Output grandi (embedding matrices già generate, opzionale: rimuovi se vuoi versioning)
 outputs/clip_text_embeddings.npy
 outputs/clip_cosine_similarity.npy
+outputs/clip_image_embeddings.npy
+outputs/clip_image_embedding_manifest.csv
 
 #file di claude 
 .claudeignore
