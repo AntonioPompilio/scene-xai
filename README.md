@@ -38,14 +38,17 @@ Dataset not included in this repo — see [Places365](http://places2.csail.mit.e
 scene-xai/
 ├── scripts/
 │   ├── 1-metadata_EDA.py          # Phase 1: metadata analysis
-│   ├── 2-image_quality.py         # Phase 2: image quality metrics
+│   ├── 2-image_quality.py         # Phase 2: image quality metrics (cv2 + Lanczos)
 │   ├── 3-clip_text_embeddings.py  # Phase 3: CLIP text encoding
-│   └── 4-clustering.py            # Phase 4: K-Means + UMAP
+│   ├── 4-clustering.py            # Phase 4: K-Means + UMAP
+│   └── 5-subset_selection.py      # Phase 5: balanced subset for MSAE training
 ├── outputs/                       # Generated CSVs and plots
+├── output_subset/                 # Balanced subset (cluster_<id>/<category>/*.jpg)
 ├── categories_places365.txt       # 365 category names
 ├── IO_places365.txt               # Indoor/outdoor labels
 ├── labels_sunattribute.txt        # 102 SUN semantic attributes
 ├── W_sceneattribute_wideresnet18.npy  # Pre-trained attribute classifier
+├── requirements.txt               # Python dependencies
 └── CLAUDE.md                      # Project context & documentation
 ```
 

@@ -24,6 +24,7 @@ Esecuzione:
 
 from pathlib import Path
 import random
+import time
 import numpy as np
 import pandas as pd
 import matplotlib
@@ -31,6 +32,7 @@ matplotlib.use("Agg")#usa backend "Agg" per generare immagini senza display (hea
 import matplotlib.pyplot as plt #importa pyplot per la creazione di grafici
 import matplotlib.gridspec as gridspec #gridspec permette di creare layout di subplot più complessi e personalizzati
 from PIL import Image #PIL (Pillow) per la manipolazione delle immagini (caricamento, ridimensionamento, conversione)
+import cv2 #OpenCV per il caricamento e il resize veloce delle immagini (interpolazione Lanczos in C++)
 from tqdm import tqdm #tqdm fornisce barre di progresso per iterazioni lunghe (es. loop su categorie o immagini)
 
 # ── Riproducibilità ───────────────────────────────────────────────────────────
@@ -47,7 +49,7 @@ OUTPUTS.mkdir(exist_ok=True)
 # ── Parametri ─────────────────────────────────────────────────────────────────
 N_QUALITY_SAMPLES = 200  # immagini per categoria per le statistiche qualitative
 MONTAGE_SIZE      = 64   # pixel per lato di ogni thumbnail nel montage overview
-THUMB_QUALITY     = 20   
+THUMB_QUALITY     = 20
 
 plt.rcParams.update({
     "figure.dpi": 150,#dpi più alto per immagini più nitide
@@ -73,11 +75,20 @@ def sample_paths(paths: list, n: int, seed: int = SEED) -> list:
 
 #carica un'immagine, la ridimensiona a 128 x 128 (non 256 x 256 per velocità e per mantenere abbastanza dettaglio per le statistiche qualitative)
 #restituisce un array numpy con i valori RGB (float32 per i calcoli, ma in scala 0-255, che poi verrà normalizzato in [0.0, 1.0] dividendo per 255.0)
-def load_image_rgb(path: Path, size: int ) -> np.ndarray:
+# def load_image_rgb(path: Path, size: int ) -> np.ndarray:
 
-    with Image.open(path) as img: #apre l'immagine usando PIL, with garantisce che il file venga chiuso dopo l'uso
-        img = img.convert("RGB").resize((size, size), Image.BILINEAR) # scompone la matrice originale dell'immagine in 3 matrici(R, G , B) e le combina in un'unica matrice tridimensionale, poi l'immagine viene ridimensionata a 128 x 128 usando l'interpolazione bilineare (Image.BILINEAR), una "compressione intelligente" dell'immagine che è un buon compromesso tra qualità e velocità per questo scopo
-        return np.array(img, dtype=np.float32) / 255.0  # normalizzato in [0.0, 1.0]
+#     with Image.open(path) as img: #apre l'immagine usando PIL, with garantisce che il file venga chiuso dopo l'uso
+#         img = img.convert("RGB").resize((size, size), Image.BILINEAR) # scompone la matrice originale dell'immagine in 3 matrici(R, G , B) e le combina in un'unica matrice tridimensionale, poi l'immagine viene ridimensionata a 128 x 128 usando l'interpolazione bilineare (Image.BILINEAR), una "compressione intelligente" dell'immagine che è un buon compromesso tra qualità e velocità per questo scopo
+#         return np.array(img, dtype=np.float32) / 255.0  # normalizzato in [0.0, 1.0]
+def load_image_rgb(path: Path, size: int) -> np.ndarray:
+    # cv2.imread carica in BGR uint8: convertiamo a RGB per coerenza con la
+    # formula di luminanza ITU-R BT.709 (che pesa i canali in ordine R,G,B).
+    img = cv2.imread(str(path))
+    if img is None:
+        raise IOError(f"Impossibile leggere l'immagine: {path}")
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    img = cv2.resize(img, (size, size), interpolation=cv2.INTER_LANCZOS4)
+    return img.astype(np.float32) / 255.0
 
 #prende un'immagine, calcola la luminosità percettiva, il contrasto (deviazione standard della luminosità) e la saturazione media (calcolata con la formula HSV) e restituisce un dizionario con queste statistiche. Tutti i valori sono normalizzati in scala [0.0, 1.0].
 def compute_image_stats(img_array: np.ndarray) -> dict:
@@ -139,12 +150,12 @@ def compute_image_stats(img_array: np.ndarray) -> dict:
 # Saperlo prima di scegliere il subset è utile.
 
 def compute_quality_stats(df: pd.DataFrame) -> pd.DataFrame:
-    print("\n[1/3] Calcolo statistiche qualitative per categoria ...")
+    print(f"\n[1/3] Calcolo statistiche qualitative per categoria ...")
     print(f"  ({N_QUALITY_SAMPLES} immagini per categoria, ~{len(df) * N_QUALITY_SAMPLES} immagini totali)")
 
     records = []
     for _, row in tqdm(df.iterrows(), total=len(df), ascii=True, desc="  categorie"):#itero sulle righe del DataFrame con una barra di progresso, total indica il numero totale di iterazioni per la barra, ascii=True usa caratteri ASCII per la barra (compatibile con tutti i terminali), desc è una descrizione da mostrare accanto alla barra
-        paths = get_image_paths(TRAIN, row["scene_path"]) #ottengo i path delle immagini per la categoria specificata in scene_path 
+        paths = get_image_paths(TRAIN, row["scene_path"]) #ottengo i path delle immagini per la categoria specificata in scene_path
         if not paths:#se non ci sono immagini per questa categoria, aggiunge nan alle statistiche e va avanti alla prossima categoria
             records.append({
                 "idx": row["idx"], "full_name": row["full_name"],
@@ -234,7 +245,11 @@ def build_overview_montage(df: pd.DataFrame, out_dir: Path):
 # ==============================================================================
 
 def plot_quality_stats(stats_df: pd.DataFrame, out_dir: Path):
-    print("\n[3/3] Generazione grafici statistiche qualitative ...")
+    print(f"\n[3/3] Generazione grafici statistiche qualitative ...")
+
+    from matplotlib.patches import Patch
+    legend = [Patch(color="#4C72B0", label="indoor"),
+              Patch(color="#DD8452", label="outdoor")]
 
     stats_df = stats_df.sort_values("mean_brightness")
 
@@ -249,15 +264,11 @@ def plot_quality_stats(stats_df: pd.DataFrame, out_dir: Path):
            width=1.0, edgecolor="none")
     ax.set_xlabel("Categoria (ordinata per luminosità crescente)", fontsize=11)
     ax.set_ylabel("Luminosità media (0–1)", fontsize=11)
-    ax.set_title("Places365 — Luminosità media per categoria", fontsize=13)
+    ax.set_title(f"Places365 — Luminosità media per categoria", fontsize=13)
     ax.set_xticks([])
-    # Legenda manuale
-    from matplotlib.patches import Patch
-    legend = [Patch(color="#4C72B0", label="indoor"),
-              Patch(color="#DD8452", label="outdoor")]
     ax.legend(handles=legend, fontsize=10)
     fig.tight_layout()
-    out = out_dir / "plot_brightness_per_category.png"
+    out = out_dir / f"plot_brightness_per_category.png"
     fig.savefig(out, bbox_inches="tight")
     plt.close(fig)
     print(f"  Salvato: {out.name}")
@@ -288,10 +299,10 @@ def plot_quality_stats(stats_df: pd.DataFrame, out_dir: Path):
         ax.set_title(title, fontsize=11)
         ax.legend(handles=legend, fontsize=9)
 
-    fig.suptitle("Places365 — Categorie per varianza visiva intra-categoria",
+    fig.suptitle(f"Places365 — Varianza visiva intra-categoria",
                  fontsize=13, y=1.01)
     fig.tight_layout()
-    out = out_dir / "plot_variance_ranking.png"
+    out = out_dir / f"plot_variance_ranking.png"
     fig.savefig(out, bbox_inches="tight")
     plt.close(fig)
     print(f"  Salvato: {out.name}")
@@ -316,26 +327,29 @@ def main():
     df = pd.read_csv(metadata_path)
     print(f"\nCaricate {len(df)} categorie da metadata.csv")
 
-    # Step 1: statistiche qualitative
+    # Step 1: calcolo statistiche (sempre ricalcolato, nessuna cache)
+    t0 = time.perf_counter()
     stats_df = compute_quality_stats(df)
+    elapsed = time.perf_counter() - t0
+
     out_csv = OUTPUTS / "image_quality_stats.csv"
     stats_df.to_csv(out_csv, index=False)
     print(f"\n  Statistiche salvate: {out_csv.name}")
+    print(f"  Tempo calcolo metriche: {elapsed:.1f}s")
 
-    # Stampa le categorie più "problematiche"
-    print("\n─── Top 10 categorie con maggiore varianza visiva ───")
+    print(f"\n--- Top 10 categorie con maggiore varianza visiva ---")
     top10 = stats_df.nlargest(10, "std_brightness")[["full_name", "io", "std_brightness", "mean_brightness"]]
     print(top10.to_string(index=False))
 
-    print("\n─── Top 10 categorie più scure (bassa luminosità) ───")
+    print(f"\n--- Top 10 categorie piu' scure ---")
     dark10 = stats_df.nsmallest(10, "mean_brightness")[["full_name", "io", "mean_brightness", "std_brightness"]]
     print(dark10.to_string(index=False))
 
-    # Step 2: overview montage
-    build_overview_montage(df, OUTPUTS)
-
     # Step 3: plot statistiche
     plot_quality_stats(stats_df, OUTPUTS)
+
+    # Step 2: overview montage
+    build_overview_montage(df, OUTPUTS)
 
     print("\nPhase 2b completata.")
     print(f"Output in: {OUTPUTS}")

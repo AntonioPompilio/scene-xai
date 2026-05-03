@@ -1,0 +1,26 @@
+# Core scientifico
+numpy
+pandas
+scikit-learn
+
+# Visualizzazione
+matplotlib
+
+# Image processing
+Pillow
+opencv-python
+
+# Deep learning / CLIP
+torch
+transformers
+
+# Clustering / dim reduction
+umap-learn
+
+# Utility
+tqdm
+
+# CLIP (OpenAI, opzionale — backend preferito da scripts/3-clip_text_embeddings.py)
+# Si installa separatamente perché distribuito via GitHub:
+#   pip install git+https://github.com/openai/CLIP.git
+# Se non installato, lo script usa transformers come fallback.
