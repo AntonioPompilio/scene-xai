@@ -53,6 +53,7 @@ outputs/clip_text_embeddings.npy
 outputs/clip_cosine_similarity.npy
 outputs/clip_image_embeddings.npy
 outputs/clip_image_embedding_manifest.csv
+outputs/places365_ViT-L~14_*.npy
 
 #file di claude 
 .claudeignore
