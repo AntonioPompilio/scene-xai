@@ -56,7 +56,7 @@ outputs/clip_image_embedding_manifest.csv
 outputs/places365_ViT-L~14_*.npy
 outputs/laion_unigram_*.npy
 outputs/similarity_matrix.npy
-
+sae_activations_test_2938_6144.npy
 # Pesi del modello addestrato
 outputs/models/
 
